@@ -1,0 +1,11 @@
+CREATE TABLE `total_cost` (
+	`id` INT(10) NOT NULL AUTO_INCREMENT,
+	`user` VARCHAR(50) NULL DEFAULT NULL,
+	`transaction_date` DATE NULL DEFAULT NULL,
+	`cost_center` VARCHAR(50) NULL DEFAULT NULL,
+	`total_cost` DECIMAL(10,2) NULL DEFAULT NULL,
+	PRIMARY KEY (`id`) USING BTREE
+)
+COLLATE='utf8mb4_0900_ai_ci'
+ENGINE=InnoDB
+;
