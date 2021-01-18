@@ -1,4 +1,3 @@
-# Reading an excel file using Python
 from openpyxl import load_workbook
 import xlsxwriter
 import csv
