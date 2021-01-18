@@ -124,21 +124,22 @@ def transform_data(sheet):
     return total_cost
 
 
-def save_sheet(file):
+def save_sheet(file, file_name_output):
     '''
     Function to save the file.
 
     Parameters:
         file (str): The file to save.
+        file_name_output (str): File name output.
     
     Returns:
         True (bool): Return Boolean expression.
     '''
     
-    with xlsxwriter.Workbook('TotalCost.xlsx') as workbook:
+    with xlsxwriter.Workbook(file_name_output) as workbook:
         worksheet = workbook.add_worksheet()
 
-        for row_num, data in enumerate(total_cost):
+        for row_num, data in enumerate(file):
             worksheet.write_row(row_num, 0, data)
 
     return True
@@ -153,4 +154,5 @@ if __name__ == "__main__":
     
     if sheet:
         total_cost = transform_data(sheet)
-        save_sheet(total_cost)
+        file_name_output = "TotalCost.xlsx"
+        save_sheet(total_cost, file_name_output)
