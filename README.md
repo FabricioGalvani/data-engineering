@@ -31,4 +31,9 @@ Ele criará o arquivo TotalCost.xlsx no diretório atual.
 etl.py
 ```
 
+Caso não funcione, execute chamando o python:
+```py
+python etl.py
+```
+
 Enjoy!
